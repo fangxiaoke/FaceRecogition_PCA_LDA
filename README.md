@@ -1,11 +1,9 @@
 ## Read me
-This repos uses the ORL dataset, which you may obtain the raw images from here[1].
+This repos tends to handle photo-sketch recognition task using sketch matching method. I use two datasets: CUHK and CUFSF.
 
-In my experiment settings, I use the first 7 image of each person as train, and the rest as test, the data is saved in `data.mat`
+Face features are extracted from VGG-Face model (4096-dimension), which are stored as .mat files.
 
-The main idea is to use PCA to project the image in the low dimension subspace. And afterwards use linear discriminent analysis( also knowns as the Fisher LDA) to achieve the classification tasks.
+The GUI system for photo-retrieval is in the SearchGUI directory based on the extracted face features using PCA and LDA algorithm.
 
-Since the code is writen about 2 years ago, which is my first try of face recognition task, I forgot the details of the code. I may add comment when I have time. But whatever the final accuracy is about 90%, which is quite impressive.   
+Final recognition rate is about 87%. Continue to be improved...
 
-
-[1] [http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html)
